@@ -399,6 +399,7 @@ def http_bot(
             prompt = list(list(x) for x in conv.messages[conv.offset :])
         else:
             prompt = conv.get_prompt()
+        logger.info(f"prompt {prompt}")
         stream_iter = model_worker_stream_iter(
             conv, model_name, worker_addr, prompt, temperature, top_p, max_new_tokens
         )
