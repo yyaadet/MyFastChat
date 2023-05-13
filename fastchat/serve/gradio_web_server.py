@@ -506,6 +506,9 @@ By using this service, users are required to agree to the following terms: The s
 
 ### Choose a model to chat with
 """
+    mini_notice_markdown = """
+# 🏔️ Chat with Open Large Language Models
+"""
 
     model_description_md = """
 | | | |
@@ -524,7 +527,7 @@ By using this service, users are required to agree to the following terms: The s
             model_description_md += "\n"
 
     state = gr.State()
-    gr.Markdown(notice_markdown + model_description_md, elem_id="notice_markdown")
+    gr.Markdown(mini_notice_markdown + model_description_md, elem_id="notice_markdown")
 
     with gr.Row(elem_id="model_selector_row"):
         model_selector = gr.Dropdown(
