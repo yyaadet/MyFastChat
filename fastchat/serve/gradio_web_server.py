@@ -539,7 +539,7 @@ By using this service, users are required to agree to the following terms: The s
 
     chatbot = grChatbot(
         elem_id="chatbot", label="Scroll down and start chatting", visible=False
-    ).style(height=550)
+    ).style(height=400)
     with gr.Row():
         with gr.Column(scale=20):
             textbox = gr.Textbox(
